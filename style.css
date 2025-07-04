@@ -1,0 +1,265 @@
+/* CSS variables */
+:root {
+    /* Text */
+    --pale-violet: hsl(
+        276,
+        100%,
+        81%
+    ); /* sub-heading at the top of the app UI */
+    --moderate-violet: hsl(276, 55%, 52%); /* chat on the left */
+    --desaturated-dark-violet: hsl(271, 15%, 43%); /* chat on the right */
+    --grayish-blue: hsl(206, 6%, 79%); /* placeholder text */
+    --very-dark-desaturated-violet: hsl(271, 36%, 24%); /* main heading */
+    --dark-grayish-violet: hsl(270, 7%, 64%); /* paragraph */
+
+    /* Gradients */
+    --light-magenta: hsl(293, 100%, 63%);
+    --light-violet: hsl(264, 100%, 61%);
+
+    /* Secondary */
+    --white: hsl(0, 0%, 100%);
+    --light-grayish-violet: hsl(270, 20%, 96%);
+    --very-dark-desaturated-violet: hsl(271, 36%, 24%);
+    --very--light--magenta: hsl(289, 100%, 72%);
+
+    /* Font Weights */
+    --normal-fw: 400;
+    --med-fw: 500;
+    --heavy-fw: 700;
+
+    /* Font family */
+    --rubik: 'Rubik', sans-serif;
+}
+
+/* CSS reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h2,
+p,
+a {
+    font-family: var(--rubik);
+}
+
+button {
+    background: none;
+    border: none;
+}
+/*---Chat section---*/
+.bg-pattern {
+    z-index: -999;
+    border-radius: 0 0 6rem;
+    width: 12rem;
+    height: 10rem;
+    background: linear-gradient(var(--light-magenta), var(--light-violet));
+}
+
+/* Chat card */
+.chat-card {
+    border: 1rem solid rgb(255, 255, 255);
+    border-radius: 2.2rem 2.2rem;
+    box-shadow: 0px 4px 20px 4px rgba(0, 0, 0, 0.258);
+}
+
+/* chat-hearder */
+.chat-header {
+    background: linear-gradient(
+        to right,
+        var(--light-violet),
+        var(--light-magenta)
+    );
+    display: flex;
+    align-items: center;
+    /* gap: 2rem; */
+    padding: 1rem 0.5rem;
+    border-radius: 1.2rem 1.2rem 0.3rem 0.3rem;
+}
+
+/* user info */
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+/* chat header image */
+.user-avatar {
+    border: 2px solid var(--white);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
+
+/* menu image */
+.menu-image {
+    margin-left: auto;
+}
+
+/* user details */
+.user-details {
+    margin-left: 1rem;
+}
+
+.user-name {
+    color: var(--white);
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: 0.03rem;
+}
+
+.user-status {
+    background: linear-gradient(var(--grayish-blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Chat Messages */
+.chat-messages {
+    border-radius: 0 0 1.2rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 0.5rem;
+    background: hsl(0deg 0% 92.27%);
+}
+
+/* Message received container*/
+.message-received-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+/* Message sent container */
+.message-sent-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+/* Image gallery */
+.image-gallery {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: auto;
+}
+
+.gallery-image {
+    height: 50px;
+    width: 50px;
+    border-radius: 0.8rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.058);
+}
+
+/* message */
+.message {
+    font-size: 0.8rem;
+    width: 60%;
+    padding: 0.5rem;
+}
+
+/* message-received-content */
+.message-received {
+    background-color: hsla(275, 95%, 78%, 0.236);
+    color: var(--light-violet);
+    border-radius: 0.8rem 0.8rem 0.8rem 0.2rem;
+}
+
+.message-sent {
+    background-color: var(--white);
+    margin-left: auto;
+    border-radius: 0.8rem 0.8rem 0.2rem 0.8rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.058);
+}
+
+/* Chat option button */
+.chat-options {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.option-button {
+    background: linear-gradient(
+        to right,
+        var(--light-magenta),
+        var(--light-violet)
+    );
+    padding: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    width: 60%;
+    border-radius: 0.8rem 0.8rem 0.8rem 0.2rem;
+}
+
+.radio-btn {
+    width: 0.625rem;
+    height: 0.625rem;
+    border: 0.0625rem solid var(--white);
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.time {
+    font-family: var(--rubik);
+    color: var(--white);
+}
+
+.price {
+    font-family: var(--rubik);
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 500;
+    margin-left: auto;
+}
+
+/* Chat input */
+.chat-input {
+    display: flex;
+    gap: 0.5rem;
+}
+.input-field {
+    width: 100%;
+    border-radius: 2rem;
+    padding: 1rem 0.5rem;
+    border: none;
+    background-color: var(--white);
+}
+
+.send-btn {
+    background-color: black;
+    border-radius: 50%;
+}
+
+/*---Booking section---*/
+.booking-section {
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--very-dark-desaturated-violet);
+}
+
+.section-description {
+    text-align: center;
+    line-height: 1.8rem;
+    color: var(--dark-grayish-violet);
+}
+
+/* Attribution */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}

@@ -5,33 +5,38 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <!-- displays site properly based on user's device -->
 
+        <!-- Favicon -->
         <link
             rel="icon"
             type="image/png"
             sizes="32x32"
             href="./images/favicon-32x32.png"
         />
+        <!-- Google fonts embed code -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+            rel="stylesheet"
+        />
+        <!-- CSS link -->
+        <link rel="stylesheet" href="style.css" />
 
-        <title>Frontend Mentor | [Challenge Name Here]</title>
-
-        <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-        <style>
-            .attribution {
-                font-size: 11px;
-                text-align: center;
-            }
-            .attribution a {
-                color: hsl(228, 45%, 44%);
-            }
-        </style>
+        <title>Kaska Chat App</title>
     </head>
     <body>
         <main class="main-container">
             <!-- Chat Section -->
             <section class="chat-section">
+                <div class="bg-pattern"></div>
                 <div class="chat-card">
                     <header class="chat-header">
                         <div class="user-info">
+                            <img
+                                src="./images/arrow-left-s-line.png"
+                                alt="arrow-left"
+                                class="back-button"
+                            />
                             <img
                                 src="/images/avatar.jpg"
                                 alt="user-avatar"
@@ -42,17 +47,24 @@
                             <h2 class="user-name">Samuel Green</h2>
                             <p class="user-status">Available to walk</p>
                         </div>
-                        <button class="menu-button">...</button>
+                        <img
+                            src="./images/menu.png"
+                            alt="menu"
+                            class="menu-image"
+                        />
                     </header>
                     <div class="chat-messages">
-                        <p class="message message-received">
-                            That sounds great. I'd be happy to discuss more.
-                        </p>
-                        <p class="message message-received">
-                            Could you send over some pictures of your dog,
-                            please?
-                        </p>
-                        <div class="message message-sent">
+                        <div class="message-received-container">
+                            <p class="message message-received">
+                                That sounds great. I'd be happy to discuss more.
+                            </p>
+                            <p class="message message-received">
+                                Could you send over some pictures of your dog,
+                                please?
+                            </p>
+                        </div>
+                        <div class="message-sent-container">
+                            <!-- chat images -->
                             <div class="image-gallery">
                                 <img
                                     src="./images/dog-image-1.jpg"
@@ -70,34 +82,44 @@
                                     class="gallery-image"
                                 />
                             </div>
-                            <p>Here are few pictures, She's a happy girl!</p>
+                            <p class="message message-sent">
+                                Here are few pictures, She's a happy girl!
+                            </p>
                             <p class="message message-sent">Can you make it?</p>
                         </div>
-                        <div class="message message-received">
-                            <p class="message-received">
+                        <div class="message-received-container">
+                            <p class="message message-received">
                                 She looks so happy! The time we discussed works.
                                 How long shall I take her out for?
                             </p>
+                            <!-- chat options -->
                             <div class="chat-options">
                                 <button class="option-button">
-                                    <div class="check-circle"></div>
-                                    <span>30 minute walk</span>
-                                    <span>$29</span>
+                                    <div class="radio-btn"></div>
+                                    <span class="time">30 minute walk</span>
+                                    <span class="price">$29</span>
                                 </button>
                                 <button class="option-button">
-                                    <div class="check-circle"></div>
-                                    <span>1 hour walk</span>
-                                    <span>$49</span>
+                                    <div class="radio-btn"></div>
+                                    <span class="time">1 hour walk</span>
+                                    <span class="price">$49</span>
                                 </button>
                             </div>
                         </div>
+                        <!-- chat input field -->
                         <div class="chat-input">
                             <input
                                 type="text"
                                 class="input-field"
                                 placeholder="Type a message..."
                             />
-                            <button class="send-button">➤</button>
+                            <button class="send-button">
+                                <img
+                                    src="./images/arrow-send.png"
+                                    alt="send"
+                                    class="send-btn"
+                                />
+                            </button>
                         </div>
                     </div>
                 </div>
