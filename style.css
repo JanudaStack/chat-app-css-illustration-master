@@ -48,17 +48,29 @@ button {
     background: none;
     border: none;
 }
+
 /*---Chat section---*/
+.chat-section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
 .bg-pattern {
-    z-index: -999;
-    border-radius: 0 0 6rem;
-    width: 12rem;
-    height: 10rem;
-    background: linear-gradient(var(--light-magenta), var(--light-violet));
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    border-radius: 0 0 30rem;
+    width: 50%;
+    height: 85%;
+    background: var(--moderate-violet);
 }
 
 /* Chat card */
 .chat-card {
+    position: relative;
+    margin-top: 5rem;
+    max-width: 375px;
+    min-width: 330px;
     border: 1rem solid rgb(255, 255, 255);
     border-radius: 2.2rem 2.2rem;
     box-shadow: 0px 4px 20px 4px rgba(0, 0, 0, 0.258);
@@ -120,7 +132,7 @@ button {
     border-radius: 0 0 1.2rem 1.2rem;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
     padding: 1rem 0.5rem;
     background: hsl(0deg 0% 92.27%);
 }
@@ -235,7 +247,7 @@ button {
 
 /*---Booking section---*/
 .booking-section {
-    padding-top: 3rem;
+    padding: 4rem 1.5rem 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
