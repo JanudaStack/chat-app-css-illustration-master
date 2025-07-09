@@ -246,19 +246,23 @@ button {
     display: flex;
     gap: 0.5rem;
 }
-.input-field {
+
+.chat-box {
     width: 100%;
+    background: hsla(0, 5%, 78%, 0.288);
     border-radius: 2rem;
-    padding: 1rem 0.8rem;
-    border: none;
-    background-color: var(--white);
-    color: var(--grayish-blue);
-    font-family: var(--rubik);
+    padding: 0.8rem 1rem;
+}
+
+.chat-box-text {
+    color: hsl(192, 2%, 42%);
 }
 
 .send-btn {
     background-color: black;
     border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
 }
 
 /*---Booking section---*/
@@ -315,6 +319,17 @@ button {
         border-radius: 0 0 30rem 0rem;
         width: 40%;
         height: 100%;
+    }
+
+    .bg-pattern-lg {
+        position: absolute;
+        top: 20%;
+        right: 0;
+        width: 25%;
+        height: 80%;
+        border-radius: 30rem 30rem 0 0;
+        background: hsla(0, 0%, 53%, 0.195); /* Light white color */
+        transform: rotate(360deg); /* Upside down */
     }
 
     .section-title {
